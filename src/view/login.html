@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="mx-auto p-20 w-full container">
+      <div
+        class="flex desktop:flex-row laptop:flex-row flex-col mobile:flex-col tablet:flex-col justify-center items-center gap-8 w-full"
+      >
+        <!-- Create login form -->
+        <div class="desktop:w-[80%] laptop:w-[80%] flex flex-col w-full mobile:w-full tablet:w-[80%]">
+          <header class="flex justify-between items-center gap-[18px] w-full">
+            <div>
+              <img src="../public/images/lego.png" alt="lego" />
+            </div>
+            <div class="flex justify-between gap-4">
+              <button
+                class="flex justify-center items-center border-[#EBEBEB] px-[18px] py-4 border rounded-[16px]"
+              >
+                <i class="text-[#08080A] text-[25px] fa-moon fa-solid"></i>
+              </button>
+              <button
+                class="flex justify-center items-center gap-[14px] border-[#EBEBEB] px-[30px] py-4 border rounded-[16px]"
+              >
+                <span class="font-medium text-[#08080A] text-[16px]"
+                  >فارسی</span
+                >
+                <i
+                  class="text-[#08080A] text-[20px] fa-chevron-down fa-solid"
+                ></i>
+              </button>
+            </div>
+          </header>
+          <main
+            class="desktop:w-[80%] laptop:w-full flex flex-col justify-between items-center mx-auto mt-[80px] w-full mobile:w-full tablet:w-[80%]"
+          >
+            <div class="flex flex-col gap-2 w-full">
+              <h1
+                class="font-bold text-[32px] text-custom-black leading-[48px]"
+              >
+                ورود
+              </h1>
+              <p class="font-medium text-[#78787A] text-[12px] leading-[21px]">
+                لطفا نام کاربری و رمز عبور خود را وارد کنید
+              </p>
+            </div>
+            <div
+              class="flex justify-around items-center border-[#EBEBEB] my-8 border rounded-[16px] w-full"
+            >
+              <div
+                class="hover:bg-[rgba(1,1,1,0.1)] px-[30px] py-3 transition-colors duration-500 cursor-pointer"
+              >
+                <button class="w-full">پرسنل</button>
+              </div>
+              <div
+                class="hover:bg-[rgba(1,1,1,0.1)] px-[30px] py-3 transition-colors duration-500 cursor-pointer"
+              >
+                <button class="w-full">کارفرما</button>
+              </div>
+              <div
+                class="hover:bg-[rgba(1,1,1,0.1)] px-[30px] py-3 transition-colors duration-500 cursor-pointer"
+              >
+                <button class="w-full">ناظر</button>
+              </div>
+            </div>
+            <form action="" class="flex flex-col gap-4 w-full">
+              <div class="flex flex-col gap-2 w-full">
+                <div
+                  class="flex justify-start items-center rounded-[16px] gap-[1rem] border border-{#aaa} rounded-[16px] py-[0.5rem]"
+                >
+                  <span class="pr-4 pl-[10px] border-l-2">
+                    <i class="text-[#CCCCCC] text-xl fa-solid fa-user"></i>
+                  </span>
+                  <input
+                    type="text"
+                    placeholder="نام کاربری ..."
+                    class="p-1 w-[80%] indent-[10px] focus:outline-none focus:shadow-none"
+                  />
+                  <!-- <span class="suffix"><i class="fa fa-search"></i></span> -->
+                </div>
+                <!-- <span>error</span> -->
+              </div>
+              <div class="flex flex-col gap-2 w-full">
+                <div
+                  class="flex justify-start items-center rounded-[16px] gap-[1rem] border border-{#aaa} rounded-[16px] py-[0.5rem]"
+                >
+                  <span class="pr-4 pl-[10px] border-l-2">
+                    <i class="text-[#CCCCCC] text-xl fa-lock fa-solid"></i>
+                  </span>
+                  <input
+                    type="password"
+                    placeholder="رمزعبور ..."
+                    minlength="8"
+                    class="p-1 w-[80%] indent-[10px] focus:outline-none focus:shadow-none"
+                  />
+                  <span></span>
+                    <i class="pl-2 text-custom-black text-lg fa-eye fa-solid"></i>
+                  </span>
+                </div>
+                <!-- <span>error</span> -->              
+              </div>
+              <div class="flex justify-between items-center mt-4 w-full">
+                <div class="flex justify-center items-center gap-2">
+                  <input type="checkbox" class="checkbox" />
+                  <span class="font-medium text-[14px] text-custom-black">مرا به خاطر داشته باش</span>
+                </div>
+                <a href="#" class="font-medium text-[14px] text-pale-purple">بازیابی رمز عبور</a>
+              </div>
+              <div class="w-full">
+                <button class="bg-pale-purple hover:bg-[#5955cc] mt-8 p-3 rounded-[16px] w-full font-medium text-[16px] text-white transition-colors duration-500">ورود</button>
+              </div>
+            </form>
+            <div class="flex justify-center items-center gap-1 mt-[165px] w-full">
+              <span class="font-medium text-[16px] text-custom-black leading-[21px]">
+                حساب کاربری ندارید؟
+              </span>
+              <a href="#" class="border-b-pale-purple hover:border-b-2 font-medium text-[16px] text-pale-purple leading-[21px] transition-all">ثبت نام کنید</a>
+            </div>
+          </main>
+        </div>
+        <!-- End create login form -->
+         <!-- create info web box -->
+        <div
+          class="flex flex-col justify-center items-center gap-8 bg-pale-purple px-[90px] py-[142px] rounded-[24px] w-full"
+        >
+          <!-- Create title for duties box -->
+          <div class="flex flex-col justify-start items-start gap-4 w-full">
+            <h1 class="font-medium text-[30px] text-white leading-[48px]">
+              هوشمندانه مدیریت کنید
+            </h1>
+            <p class="font-bold text-[14px] text-white leading-[21px]">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+              استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
+            </p>
+          </div>
+          <!-- End Create title for duties box -->
+          <!-- Create duties box -->
+          <div class="flex justify-center items-center w-full">
+            <div
+              class="relative desktop:w-[70%] laptop:w-[70%] flex flex-col gap-8 bg-white p-3 rounded-2xl w-full mobile:w-full tablet:w-full"
+            >
+              <h1 class="pt-2 font-medium text-black text-xl leading-[21px]">
+                وظایف
+              </h1>
+              <div
+                class="flex desktop:flex-row laptop:flex-row flex-col mobile:flex-col tablet:flex-col gap-4 w-full"
+              >
+                <div
+                  class="flex flex-col gap-4 border-[#e5e7eb] border-y-[3px] p-2 border-l-[3px] border-dashed rounded-[16px] w-full"
+                >
+                  <div class="flex gap-4 w-full">
+                    <span>2</span>
+                    <div
+                      class="bg-load-box px-3 py-1 rounded-[48px] w-full"
+                    ></div>
+                  </div>
+                  <div class="flex justify-end items-end w-full">
+                    <div
+                      class="desktop:w-[65%] laptop:w-[65%] flex justify-center items-center gap-2 bg-[#F3F8F6] px-2 py-[4px] rounded-[8px] w-full mobile:w-full tablet:w-[30%]"
+                    >
+                      <div
+                        class="bg-custom-green rounded-[50%] w-[10px] h-[10px]"
+                      ></div>
+                      <span
+                        class="font-medium text-[12px] text-custom-green leading-[18px]"
+                        >اولویت کم</span
+                      >
+                    </div>
+                  </div>
+                  <div
+                    class="desktop:my-[90px] laptop:my-[90px] my-[62px] mobile:my-[62px] tablet:my-[62px] w-full"
+                  ></div>
+                  <div
+                    class="right-[-130px] mobile:right-[-130px] mobile:bottom-[315px] tablet:right-[90px] laptop:right-[-165px] laptop:bottom-[50px] desktop:right-[-115px] flex justify-between items-center bottom-[315px] absolute bg-glass shadow-[0_4px_48px_-8px{rgba(0, 0, 0, 0.16)}] py-4 px-[7px] rounded-[16px] w-[255px]"
+                  >
+                    <div class="flex flex-col gap-3 w-full">
+                      <h1
+                        class="font-medium text-[14px] text-gray-500 leading-[18px]"
+                      >
+                        پیشرفت پروژه
+                      </h1>
+                      <div class="flex gap-2 s-full">
+                        <div
+                          class="border-2 border-custom-green p-[3px] rounded-[8px] h-fit"
+                        >
+                        <i class="text-custom-green fa-chart-line fa-solid"></i>
+                        </div>
+                        <span class="text-custom-green">
+                          + 2%
+                          <span class="text-gray-500">نسبت به دیروز</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="flex justify-center items-center w-full">
+                      <div
+                        class="w-[75%] pie"
+                        style="--p: 70; --c: #ffc16a; --b: 10px"
+                      >
+                        70%
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="flex flex-col gap-4 border-[#e5e7eb] border-y-[3px] p-2 border-r-[3px] border-dashed rounded-[16px] w-full"
+                >
+                  <div class="flex gap-4 w-full">
+                    <span>24</span>
+                    <div
+                      class="bg-load-box px-3 py-1 rounded-[48px] w-full"
+                    ></div>
+                  </div>
+                  <div class="flex flex-row-reverse justify-around items-center w-full">
+                    <div
+                      class="desktop:w-[65%] laptop:w-[65%] flex justify-center items-center gap-2 bg-custom-red px-2 py-[4px] rounded-[8px] w-full mobile:w-full tablet:w-[30%]"
+                    >
+                      <div
+                        class="bg-[#E84C41] rounded-[50%] w-[10px] h-[10px]"
+                      ></div>
+                      <span
+                        class="font-medium text-[#E84C41] text-[12px] leading-[18px]"
+                        >اولویت زیاد</span
+                      >       
+                    </div>
+                    <i class="fa-chevron-right fa-solid"></i>
+                  </div>
+                  <div class="flex flex-col justify-end items-end gap-3 w-full">
+                    <div
+                      class="bg-load-box px-3 py-2 rounded-[48px] w-[70%]"
+                    ></div>
+                    <div
+                      class="bg-load-box px-3 py-2 rounded-[48px] w-full"
+                    ></div>
+                    <div
+                      class="bg-load-box px-3 py-2 rounded-[48px] w-full"
+                    ></div>
+                    <div
+                      class="bg-load-box px-3 py-2 rounded-[48px] w-[70%]"
+                    ></div>
+                  </div>
+                  <hr class="border w-full" />
+                  <div class="avatar-group">
+                    <div class="avatar">
+                      <span class="avatar-name">name1 </span>
+                      <img
+                        src="../public//images/photo1.jpg"
+                        onerror="this.src='default.png';"
+                        alt="avatar"
+                      />
+                    </div>
+                    <div class="avatar">
+                      <span class="avatar-name">name2 </span>
+                      <img
+                        src="../public//images/photo2.jpg"
+                        onerror="this.src='default.png';"
+                        alt="avatar"
+                      />
+                    </div>
+                    <div class="avatar">
+                      <span class="avatar-name">name3 </span>
+                      <img
+                        src="../public//images/photo3.jpg"         
+                        alt="avatar"
+                        onerror="this.src='default.png';"
+                      />
+                    </div>
+                    <div class="avatar">
+                      <span class="avatar-name">name4 </span>
+                      <img
+                        src="../public//images/photo4.jpg"
+                        onerror="this.src='default.png';"
+                        alt="avatar"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="left-[-130px] flex-col mobile:left-[-130px] mobile:top-[340px] tablet:left-[-85px] laptop:left-[-128px] laptop:top-[110px] desktop:left-[-106px] desktop:top-[105px] flex justify-center gap-2 items-center top-[340px] absolute bg-glass shadow-[0_4px_48px_-8px{rgba(0, 0, 0, 0.16)}] py-4 px-[7px] rounded-[16px] w-[160px]"
+                  >
+                    <div
+                      class="border-4 border-white bg-[#dcdcff] px-[15px] py-3 rounded-[50%]"
+                    >
+                      <i
+                        class="text-[#6B67CE] text-xl fa-list-check fa-solid"
+                      ></i>
+                    </div>
+                    <div
+                      class="flex flex-col justify-center items-center w-full"
+                    >
+                      <p
+                        class="font-medium text-[#78787A] text-[12px] leading-[18px]"
+                      >
+                        کل وضایف
+                      </p>
+                      <p
+                        class="font-medium text-[#272729] text-[12px] leading-[18px]"
+                      >
+                        320 وظیفه
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End create duties box -->
+        </div>
+         <!-- end create info web box -->
+      </div>
+    </div>
+  </body>
+</html>

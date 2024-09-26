@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --pale-purple: #6b67ce;
+  --load-box: #f5f5f5;
+  --custom-green: #48ac86;
+  --custom-red: #fdf3f3;
+  --custom-black: #08080a;
+  --glass: rgba(255, 255, 255, 0.88);
+}
+@property --p {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+/* style pie chart */
+.pie {
+  --p: 20;
+  --b: 22px;
+  --c: #ffc16a;
+  --w: 150px;
+
+  width: var(--w);
+  aspect-ratio: 1;
+  position: relative;
+  display: inline-grid;
+  margin: 5px;
+  place-content: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+.pie:before,
+.pie:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+.pie:before {
+  inset: 0;
+  background: radial-gradient(farthest-side, var(--c) 98%, #0000) top/var(--b)
+      var(--b) no-repeat,
+    conic-gradient(var(--c) calc(var(--p) * 1%), #0000 0);
+  -webkit-mask: radial-gradient(
+    farthest-side,
+    #0000 calc(99% - var(--b)),
+    #000 calc(100% - var(--b))
+  );
+  mask: radial-gradient(
+    farthest-side,
+    #0000 calc(99% - var(--b)),
+    #000 calc(100% - var(--b))
+  );
+}
+.no-round:before {
+  background-size: 0 0, auto;
+}
+.no-round:after {
+  content: none;
+}
+/* end style pie chart */
+
+/* style avatar */
+.avatar-group {
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  margin-left: 25px;
+}
+.avatar {
+  position: relative;
+  transition: 0.2s;
+}
+.avatar {
+  margin-left: -1.5rem;
+  &:hover {
+    z-index: 1;
+    cursor: pointer;
+    transform: translateY(-0.5rem);
+  }
+  &:hover .avatar-name {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.avatar-name {
+  position: absolute;
+  bottom: calc(100% + 0.5rem);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 0.5rem solid;
+    border-color: rgba(0, 0, 0, 0.7) transparent transparent;
+  }
+}
+.avatar > img {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: block;
+  object-fit: cover;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+/* end style avatar */
+
+/* style checkbox */
+.checkbox {
+  width: 21.5px;
+  height: 21.5px;
+  /* background-color: white; */
+  border-radius: 8px;
+  vertical-align: middle;
+  border: 2px solid #cccccc;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+  &:checked {
+    background-color: var(--pale-purple);
+  }
+}
+/* end style checkbox */
